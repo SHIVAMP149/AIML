@@ -39,6 +39,13 @@ const workspaceLinks = [
   { href: "/admin", label: "Admin" },
 ];
 
+function isActiveSection(href: string, section: SectionKey): boolean {
+  if (section === "dashboard") {
+    return href === "/dashboard";
+  }
+  return href.includes(section);
+}
+
 type ChartPoint = {
   label: string;
   value: number;
@@ -125,7 +132,7 @@ export function WorkspaceSectionPage({ title, description, section }: WorkspaceS
               <p className="text-sm font-semibold text-ocean">Enerluma Analytics Center</p>
               <h1 className="mt-1 text-3xl font-bold text-ink">{title}</h1>
               <p className="mt-1 text-sm text-slate/75">{description}</p>
-              <p className="mt-1 text-xs text-slate/70">Signed in as {me?.full_name || "User"}</p>
+              <p className="mt-1 text-xs text-slate/70">Signed in as {me?.full_name || "Unknown User"}</p>
             </div>
             <div className="flex items-center gap-2">
               <Link href="/" className="rounded-full border border-slate/20 bg-white px-4 py-2 text-sm font-semibold text-slate">
@@ -148,7 +155,7 @@ export function WorkspaceSectionPage({ title, description, section }: WorkspaceS
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-3 py-1 text-xs font-semibold ${item.href.includes(section) || (section === "dashboard" && item.href === "/dashboard") ? "bg-ocean text-white" : "bg-white text-slate"}`}
+                className={`rounded-full px-3 py-1 text-xs font-semibold ${isActiveSection(item.href, section) ? "bg-ocean text-white" : "bg-white text-slate"}`}
               >
                 {item.label}
               </Link>

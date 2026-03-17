@@ -14,7 +14,7 @@ type AuthPageProps = {
 
 export function AuthPage({ initialMode }: AuthPageProps) {
   const router = useRouter();
-  const [mode, setMode] = useState<"login" | "register">(initialMode);
+  const mode = initialMode;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
@@ -111,16 +111,9 @@ export function AuthPage({ initialMode }: AuthPageProps) {
           </button>
         </form>
 
-        <div className="mt-4 flex flex-wrap gap-4 text-sm">
-          <button
-            type="button"
-            onClick={() => setMode(mode === "login" ? "register" : "login")}
-            className="font-medium text-ocean"
-          >
+        <div className="mt-4 text-sm">
+          <Link href={mode === "login" ? "/register" : "/login"} className="font-medium text-ocean">
             {mode === "login" ? "Need an account? Register" : "Already have an account? Login"}
-          </button>
-          <Link href={mode === "login" ? "/register" : "/login"} className="font-medium text-slate/80 underline">
-            Go to {mode === "login" ? "Register" : "Login"} page
           </Link>
         </div>
       </div>
