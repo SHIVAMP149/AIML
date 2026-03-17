@@ -4,7 +4,7 @@ function buildAuthHeaders(token?: string): HeadersInit {
   return token ? { Authorization: `Bearer ${token}` } : {};
 }
 
-type DashboardSummary = {
+export type DashboardSummary = {
   total_records: number;
   avg_water_liters: number;
   avg_energy_kwh: number;
@@ -14,7 +14,7 @@ type DashboardSummary = {
   latest_total_cost: number;
 };
 
-type ConsumptionRecord = {
+export type ConsumptionRecord = {
   date: string;
   water_consumption_liters: number;
   energy_consumption_kwh: number;
@@ -25,7 +25,7 @@ type ConsumptionRecord = {
   is_holiday: number;
 };
 
-type InsightsResponse = {
+export type InsightsResponse = {
   forecast: {
     water_next: number;
     energy_next: number;

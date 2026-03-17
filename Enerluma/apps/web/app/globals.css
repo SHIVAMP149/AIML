@@ -23,14 +23,14 @@ body {
 }
 
 body {
-  font-family: var(--font-body), sans-serif;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-display), sans-serif;
+  font-family: "Space Grotesk", "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   letter-spacing: -0.02em;
 }
 
