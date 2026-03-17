@@ -34,9 +34,17 @@ export function LandingPage() {
               <Sparkles className="h-5 w-5 text-ocean" />
               <span className="text-lg font-semibold">Enerluma</span>
             </div>
-            <Link href="/login" className="inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate">
-              Login <ArrowRight className="h-4 w-4" />
-            </Link>
+            <div className="flex items-center gap-2">
+              <Link href="/about" className="inline-flex items-center rounded-full border border-slate/20 bg-white px-4 py-2 text-sm font-semibold text-slate transition hover:bg-mist">
+                About
+              </Link>
+              <Link href="/support" className="inline-flex items-center rounded-full border border-slate/20 bg-white px-4 py-2 text-sm font-semibold text-slate transition hover:bg-mist">
+                Support
+              </Link>
+              <Link href="/login" className="inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate">
+                Login <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </header>
 
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
@@ -53,6 +61,9 @@ export function LandingPage() {
               <div className="flex flex-wrap gap-3">
                 <Link href="/login" className="inline-flex items-center gap-2 rounded-xl bg-ocean px-5 py-3 text-sm font-semibold text-white transition hover:brightness-95">
                   Access Secure Dashboard <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link href="/register" className="inline-flex items-center rounded-xl border border-slate/20 px-5 py-3 text-sm font-semibold text-slate transition hover:bg-white/80">
+                  Create Account
                 </Link>
                 <a href="#features" className="inline-flex items-center rounded-xl border border-slate/20 px-5 py-3 text-sm font-semibold text-slate transition hover:bg-white/80">
                   View Capabilities
