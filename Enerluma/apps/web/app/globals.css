@@ -1,0 +1,47 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --ink: #0e141b;
+  --mist: #f3f8f7;
+  --ocean: #009c8b;
+  --slate: #1f2a37;
+  --amber: #f0a202;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 20% 20%, #dff6f2 0%, #f3f8f7 36%, #eef3f8 100%);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.hero-grid {
+  background-image: linear-gradient(rgba(31, 42, 55, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 42, 55, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
